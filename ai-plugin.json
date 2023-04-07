@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Anony",
+    "name_for_model": "Anony",
+    "description_for_human": "文中に含まれる人名をイニシャル化して匿名にするときに使います。",
+    "description_for_model": "文中に含まれる人名をイニシャル化して匿名にするときに使います。",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:8080/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "https://avatars.githubusercontent.com/u/4569916?v=4",
+    "contact_email": "xiidec@gmail.com",
+    "legal_info_url": "http://www.example.com/legal"
+}

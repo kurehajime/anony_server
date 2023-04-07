@@ -19,11 +19,16 @@ func (h Server) Query(ctx echo.Context) error {
 		Answer: strings.ToUpper(req.Query),
 	})
 }
+func (h Server) OpenApi(ctx echo.Context) error {
+	ctx.Response().Header().Set("Content-Type", "text/yaml; charset=utf-8")
+	return ctx.File("openapi.yaml")
+}
 
 func main() {
 	e := echo.New()
 	s := Server{}
 
+	e.GET("/openapi.yaml", s.OpenApi)
 	RegisterHandlers(e, s)
 
 	e.Logger.Fatal(e.Start(":8080"))
